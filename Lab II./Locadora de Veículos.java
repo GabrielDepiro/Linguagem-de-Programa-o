@@ -11,7 +11,7 @@ public class Carros {
 	private int ano;
 	private float preco;
 
-	public Carros(
+	public void Carros(
 		String plac,
 		double poten,
 		String modelo,
@@ -65,4 +65,12 @@ public class Carros {
 		C2.correr(300);
 		C2.freio();
 }
+}
+public class Motos{
+	private String placa;
+	private double potência;
+	private String modelo;
+	private String cor;
+	private String marca;
+	
 }
