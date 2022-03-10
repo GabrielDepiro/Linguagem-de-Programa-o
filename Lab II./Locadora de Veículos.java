@@ -95,12 +95,34 @@ public class Vendedor {
 		// TODO Auto-generated constructor stub
 	}
 
+	public float get_idade() {
+		return idade;
+	}
+	public void set_idade(float novo_idade) {
+		salario = novo_idade;
+	}
+	
+	public float get_tempo_empresa() {
+		return tempo_empresa;
+	}
+	public void set_tempo_empresa(float novo_tempo_empresa) {
+		salario = novo_tempo_empresa;
+	}
+	
 	public float get_salario() {
 		return salario;
 	}
 	public void set_salario(float novo_salario) {
 		salario = novo_salario;
 	}
+	
+	public float get_salario() {
+		return salario;
+	}
+	public void set_salario(float novo_salario) {
+		salario = novo_salario;
+	}
+	
 	public static void main(String[] args) {
 		Vendedor V1 = new
 	Vendedor("Gabriel", 32, 9, 4.500);
