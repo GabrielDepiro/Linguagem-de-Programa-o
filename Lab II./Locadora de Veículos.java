@@ -68,7 +68,7 @@ public class Carro {
 		}
 		}
 
-package Locadora_de_Veículos;
+package Locadora;
 
 public class Vendedor {
 	private String nome;
@@ -95,19 +95,21 @@ public class Vendedor {
 		// TODO Auto-generated constructor stub
 	}
 
-	public float get_idade() {
+	public int get_idade() {
 		return idade;
 	}
-	public void set_idade(float novo_idade) {
-		salario = novo_idade;
+	public void set_idade(int novo_idade) {
+		idade = novo_idade;
 	}
 	
-	public float get_tempo_empresa() {
+	
+	public int get_tempo_empresa() {
 		return tempo_empresa;
 	}
-	public void set_tempo_empresa(float novo_tempo_empresa) {
-		salario = novo_tempo_empresa;
+	public void set_tempo_empresa(int novo_tempo_empresa) {
+		tempo_empresa = novo_tempo_empresa;
 	}
+	
 	
 	public float get_salario() {
 		return salario;
@@ -116,11 +118,11 @@ public class Vendedor {
 		salario = novo_salario;
 	}
 	
-	public float get_salario() {
-		return salario;
+	public int get_media_vendas() {
+		return media_vendas;
 	}
-	public void set_salario(float novo_salario) {
-		salario = novo_salario;
+	public void set_(int novo_media_vendas) {
+		salario = novo_media_vendas;
 	}
 	
 	public static void main(String[] args) {
