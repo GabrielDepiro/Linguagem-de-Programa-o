@@ -128,7 +128,10 @@ public class Vendedor {
 	public static void main(String[] args) {
 		Vendedor V1 = new
 	Vendedor("Gabriel", 32, 9, 4.500);
+		Vendedor v2 = new 
+	Vendedor ("DEpiro",43,20, 13.000);
 		
 	}
 }
+
 
