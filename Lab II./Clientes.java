@@ -2,18 +2,18 @@ package LocadoraCarros;
 
 public class Clientes {
 	private String nome;
-	​private int idade; 
-	private String​ email; 
+	private int idade; 
+	private String email; 
 	private int telefone; 
 	   
 	   
-	  ​    
-	  ​public​ ​Clientes (​String​ ​nome​, ​int​ ​idade​, ​String​ ​email​, ​int​ ​telefone​){ 
+	      
+	 public Clientes (String nome, int idade, String email, int telefone){ 
 	   
-		  ​this​.​nome ​=​ nome; 
-		  ​this​.​idade ​=​ idade; 
-		  ​this​.​email ​=​ email; 
-		  ​this​.​telefone ​=​ telefone; 
+		  ​this​.​nome = nome; 
+		  ​this​.​idade = idade; 
+		  ​this​.​email = email; 
+		  ​this​.​telefone = telefone; 
 	   
 	  } 
 	   
