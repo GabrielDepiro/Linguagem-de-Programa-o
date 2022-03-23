@@ -1,0 +1,27 @@
+
+package Teste;
+
+import java.util.Scanner;
+
+public class Pessoa {
+	Pessoa p1 = new Pessoa();
+	String nome;
+	String cpf;
+	char sexo;
+	Scanner sc = new Scanner (System.in);
+	System.out.println("Digite nome: ");
+	nome=sc.next();
+	System.out.println("Digite cpf: ");
+	cpf=sc.next();
+	Pessoa p2 = new Pessoa(cpf, nome);
+	Pessoa p3 = new Pessoa("João", 'M');
+	p1.setNome("Manuel");
+	
+	
+	help -> Eclipse Marketplcace -> Window Builder(Install)
+	other -> Window Builder -> Sw Designer
+	JFrame
+	dar o nome(Cadastro de pessoas)
+	install java awt
+	
+}
