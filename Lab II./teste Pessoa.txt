@@ -22,6 +22,5 @@ public class Pessoa {
 	other -> Window Builder -> Sw Designer
 	JFrame
 	dar o nome(Cadastro de pessoas)
-	install java awt
 	
 }
