@@ -1,0 +1,186 @@
+package Locadora_de_Carros;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import Loja.Carro;
+
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+
+import javax.swing.JCheckBox;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+
+public class CadastroCarros extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField_Placa;
+	private JTextField textField_Potência;
+	private JTextField textField_Modelo;
+	private JTextField textField_Cor;
+	private JTextField textField_Marca;
+	private JTextField textField_Ano;
+	private JTextField textField_Preço;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					CadastroCarros frame = new CadastroCarros();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public CadastroCarros() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JCheckBox Automatico = new JCheckBox("Autom\u00E1tico");
+		Automatico.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		Automatico.setBounds(288, 48, 93, 21);
+		contentPane.add(Automatico);
+		
+		JCheckBox Manual = new JCheckBox("Manual");
+		Manual.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		Manual.setBounds(288, 70, 93, 21);
+		contentPane.add(Manual);
+		
+		
+		
+		
+		JLabel lblPlaca = new JLabel("Placa");
+		lblPlaca.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPlaca.setBounds(10, 30, 45, 13);
+		contentPane.add(lblPlaca);
+		
+		JLabel lblPotência = new JLabel("Pot\u00EAncia");
+		lblPotência.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPotência.setBounds(10, 62, 56, 13);
+		contentPane.add(lblPotência);
+		
+		JLabel lblModelo = new JLabel("Modelo");
+		lblModelo.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblModelo.setBounds(10, 93, 56, 13);
+		contentPane.add(lblModelo);
+		
+		JLabel lblCor = new JLabel("Cor");
+		lblCor.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCor.setBounds(10, 122, 56, 13);
+		contentPane.add(lblCor);
+		
+		JLabel lblMarca = new JLabel("Marca");
+		lblMarca.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblMarca.setBounds(10, 154, 56, 13);
+		contentPane.add(lblMarca);
+		
+		JLabel lblAno = new JLabel("Ano");
+		lblAno.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblAno.setBounds(10, 187, 56, 13);
+		contentPane.add(lblAno);
+		
+		JLabel lblPreço = new JLabel("Pre\u00E7o");
+		lblPreço.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPreço.setBounds(10, 217, 56, 13);
+		contentPane.add(lblPreço);
+		
+		JLabel lblCambio = new JLabel("Cambio");
+		lblCambio.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCambio.setBounds(296, 30, 56, 13);
+		contentPane.add(lblCambio);
+		
+		textField_Placa = new JTextField();
+		textField_Placa.setBounds(70, 29, 96, 19);
+		contentPane.add(textField_Placa);
+		textField_Placa.setColumns(10);
+		
+		textField_Potência = new JTextField();
+		textField_Potência.setColumns(10);
+		textField_Potência.setBounds(70, 62, 96, 19);
+		contentPane.add(textField_Potência);
+		
+		textField_Modelo = new JTextField();
+		textField_Modelo.setColumns(10);
+		textField_Modelo.setBounds(70, 92, 96, 19);
+		contentPane.add(textField_Modelo);
+		
+		textField_Cor = new JTextField();
+		textField_Cor.setColumns(10);
+		textField_Cor.setBounds(70, 121, 96, 19);
+		contentPane.add(textField_Cor);
+		
+		textField_Marca = new JTextField();
+		textField_Marca.setColumns(10);
+		textField_Marca.setBounds(70, 153, 96, 19);
+		contentPane.add(textField_Marca);
+		
+		textField_Ano = new JTextField();
+		textField_Ano.setColumns(10);
+		textField_Ano.setBounds(70, 186, 96, 19);
+		contentPane.add(textField_Ano);
+		
+		textField_Preço = new JTextField();
+		textField_Preço.setColumns(10);
+		textField_Preço.setBounds(70, 216, 96, 19);
+		contentPane.add(textField_Preço);
+	
+		JButton OK = new JButton("OK");
+		OK.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			//lista para armazenar várias pessoas
+			ArrayList pes=new ArrayList<Carro>();
+			if((!textField_Placa.getText().equals(""))&& !(textField_Potência.getText().equals(""))
+			&& !(textField_Modelo.getText().equals(""))&& !(textField_Cor.getText().equals(""))
+			&& !(textField_Marca.getText().equals("")) && !(textField_Ano.getText().equals(""))
+			&& !(textField_Preço.getText().equals("")))
+			{
+				// um objeto pessoa é criado
+				Carro p4=new Carro(textField_Placa.getText(),textField_Potência.getText(),
+						textField_Modelo.getText(),textField_Cor.getText(),
+						textField_Marca.getText(),textField_Ano.getText(),
+						textField_Preço.getText());
+				//e adcionado à lista
+				pes.add(p4);
+				//campos são limpos
+				textField_Placa.setText("");
+				textField_Potência.setText("");
+				textField_Modelo.setText("");
+				textField_Cor.setText("");
+				textField_Marca.setText("");
+				textField_Ano.setText("");
+				textField_Preço.setText("");
+		}
+			}
+	});
+	
+
+	OK.setFont(new Font("Tahoma", Font.PLAIN, 15));
+	OK.setBounds(309, 199, 85, 21);
+	contentPane.add(OK);	
+	
+}
+}
+
