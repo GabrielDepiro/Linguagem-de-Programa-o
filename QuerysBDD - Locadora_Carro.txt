@@ -1,0 +1,32 @@
+//Tabela Carro
+create table carro(
+	id_carro bigint Identity,
+	ano int,
+	cor varchar(25),
+	marca varchar(50),
+	modelo varchar(50),
+	placa varchar(7),
+	preco varchar(50),
+	primary key(id_carro)
+);
+
+_____________________________________
+//Tabela cliente
+create table cliente(
+	cpf varchar(14),
+	nome varchar(100),
+	email varchar(50),
+	endereco varchar(100),
+	telefone varchar(15),
+	primary key(cpf)
+);
+
+_____________________________________
+//Tabela Funcionario
+create table funcionario(
+	cpf varchar(14),
+	nome varchar(100),
+	email varchar(100),
+	cargo varchar(50)
+	primary key (cpf)
+);
